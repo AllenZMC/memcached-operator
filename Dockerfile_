@@ -1,0 +1,4 @@
+FROM allenczm/busybox
+ADD ./manager /manager
+ENV TZ Asia/Shanghai
+CMD ["/manager"]
