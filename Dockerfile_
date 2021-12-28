@@ -1,4 +1,5 @@
 FROM allenczm/busybox
 ADD ./manager /manager
 ENV TZ Asia/Shanghai
+LABEL com.example.label-with-value="foo"
 CMD ["/manager"]

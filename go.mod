@@ -3,13 +3,12 @@ module awesomeProject
 go 1.15
 
 require (
-	github.com/go-logr/logr v0.1.0
-	github.com/onsi/ginkgo v1.12.1
-	github.com/onsi/gomega v1.10.1
-	github.com/prometheus/client_golang v1.0.0
-
-	k8s.io/api v0.18.6
-	k8s.io/apimachinery v0.18.6
-	k8s.io/client-go v0.18.6
-	sigs.k8s.io/controller-runtime v0.6.2
+	github.com/go-logr/logr v0.4.0
+	github.com/onsi/ginkgo v1.16.4
+	github.com/onsi/gomega v1.15.0
+	github.com/prometheus/client_golang v1.11.0
+	k8s.io/api v0.21.4
+	k8s.io/apimachinery v0.21.4
+	k8s.io/client-go v0.21.4
+	sigs.k8s.io/controller-runtime v0.9.7
 )

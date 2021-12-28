@@ -1,11 +1,18 @@
 domain: example.com
-layout: go.kubebuilder.io/v2
+layout:
+- go.kubebuilder.io/v2
+plugins:
+  go.sdk.operatorframework.io/v2-alpha: {}
 projectName: memcached-operator
 repo: awesomeProject
 resources:
-- group: cache
+- domain: example.com
+  group: cache
   kind: Memcached
+  path: awesomeProject/api/v1
   version: v1
-version: 3-alpha
-plugins:
-  go.sdk.operatorframework.io/v2-alpha: {}
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1beta1
+version: "3"

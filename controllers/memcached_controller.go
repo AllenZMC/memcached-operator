@@ -42,7 +42,7 @@ type MemcachedReconciler struct {
 // +kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 // +kubebuilder:rbac:groups=core,resources=pods,verbs=get;list;
 
-func (r *MemcachedReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
+func (r *MemcachedReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	_ = context.Background()
 	_ = r.Log.WithValues("memcached", req.NamespacedName)
 
